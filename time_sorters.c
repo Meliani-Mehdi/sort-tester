@@ -175,41 +175,55 @@ int getMax(int arr[], int n) {
 // A function to do counting sort of arr[] according to
 // the digit represented by exp.
 void countSort(int arr[], int n, int exp) {
+    // Find the maximum and minimum values in arr
+    int max = INT_MIN, min = INT_MAX;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > max) max = arr[i];
+        if (arr[i] < min) min = arr[i];
+    }
+
+    // Range of the counting array
+    int range = max - min + 1;
+    int *count = (int *)malloc(range * sizeof(int)); // Dynamic allocation for counting array
+    if (count == NULL) {
+        perror("Failed to allocate memory for count array");
+        return;
+    }
+
     // Output array
     int *output = (int *)malloc(n * sizeof(int)); // Dynamic memory allocation
     if (output == NULL) {
-        perror("Failed to allocate memory");
-        return; // Exit the function if memory allocation fails
+        perror("Failed to allocate memory for output array");
+        free(count); // Free the count array if output allocation fails
+        return;
     }
 
-    int i, count[10] = {0};
+    // Initialize count array
+    for (int i = 0; i < range; i++)
+        count[i] = 0;
 
     // Store count of occurrences in count[]
-    for (i = 0; i < n; i++) {
-        // Handle cases where arr[i] is negative or out of expected range
-        if (arr[i] < 0) {
-            fprintf(stderr, "Negative numbers are not supported\n");
-            free(output); // Free allocated memory
-            return;
-        }
-        count[(arr[i] / exp) % 10]++;
+    for (int i = 0; i < n; i++) {
+        count[arr[i] - min]++; // Shift index to handle negative numbers
     }
 
-    // Change count[i] to contain actual positions of this digit in output[]
-    for (i = 1; i < 10; i++)
+    // Change count[i] so that it contains actual positions
+    for (int i = 1; i < range; i++)
         count[i] += count[i - 1];
 
     // Build the output array
-    for (i = n - 1; i >= 0; i--) {
-        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-        count[(arr[i] / exp) % 10]--;
+    for (int i = n - 1; i >= 0; i--) {
+        output[count[arr[i] - min] - 1] = arr[i];
+        count[arr[i] - min]--; // Decrement count
     }
 
-    // Copy the output array to arr[], so that arr[] now contains sorted numbers
-    for (i = 0; i < n; i++)
+    // Copy the output array to arr[]
+    for (int i = 0; i < n; i++)
         arr[i] = output[i];
 
-    free(output); // Free allocated memory
+    // Free allocated memory
+    free(count);
+    free(output);
 }
 
 // The main function to that sorts arr[] of size n using
