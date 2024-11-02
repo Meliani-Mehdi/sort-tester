@@ -175,29 +175,41 @@ int getMax(int arr[], int n) {
 // A function to do counting sort of arr[] according to
 // the digit represented by exp.
 void countSort(int arr[], int n, int exp) {
-  // output array
-  int output[n];
-  int i, count[10] = { 0 };
+    // Output array
+    int *output = (int *)malloc(n * sizeof(int)); // Dynamic memory allocation
+    if (output == NULL) {
+        perror("Failed to allocate memory");
+        return; // Exit the function if memory allocation fails
+    }
 
-  // Store count of occurrences in count[]
-  for (i = 0; i < n; i++)
-    count[(arr[i] / exp) % 10]++;
+    int i, count[10] = {0};
 
-  // Change count[i] so that count[i] now contains actual
-  // position of this digit in output[]
-  for (i = 1; i < 10; i++)
-    count[i] += count[i - 1];
+    // Store count of occurrences in count[]
+    for (i = 0; i < n; i++) {
+        // Handle cases where arr[i] is negative or out of expected range
+        if (arr[i] < 0) {
+            fprintf(stderr, "Negative numbers are not supported\n");
+            free(output); // Free allocated memory
+            return;
+        }
+        count[(arr[i] / exp) % 10]++;
+    }
 
-  // Build the output array
-  for (i = n - 1; i >= 0; i--) {
-    output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-    count[(arr[i] / exp) % 10]--;
-  }
+    // Change count[i] to contain actual positions of this digit in output[]
+    for (i = 1; i < 10; i++)
+        count[i] += count[i - 1];
 
-  // Copy the output array to arr[], so that arr[] now
-  // contains sorted numbers according to current digit
-  for (i = 0; i < n; i++)
-    arr[i] = output[i];
+    // Build the output array
+    for (i = n - 1; i >= 0; i--) {
+        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+        count[(arr[i] / exp) % 10]--;
+    }
+
+    // Copy the output array to arr[], so that arr[] now contains sorted numbers
+    for (i = 0; i < n; i++)
+        arr[i] = output[i];
+
+    free(output); // Free allocated memory
 }
 
 // The main function to that sorts arr[] of size n using

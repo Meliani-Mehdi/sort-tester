@@ -1,0 +1,30 @@
+Sorting with Bubble Sort:
+  Array size 10: 0.000000 seconds
+  Array size 100: 0.001000 seconds
+  Array size 1000: 0.002000 seconds
+  Array size 10000: 0.240000 seconds
+
+Sorting with Quick Sort:
+  Array size 10: 0.000000 seconds
+  Array size 100: 0.000000 seconds
+  Array size 1000: 0.000000 seconds
+  Array size 10000: 0.001000 seconds
+
+Sorting with Selection Sort:
+  Array size 10: 0.000000 seconds
+  Array size 100: 0.000000 seconds
+  Array size 1000: 0.001000 seconds
+  Array size 10000: 0.100000 seconds
+
+Sorting with Insertion Sort:
+  Array size 10: 0.000000 seconds
+  Array size 100: 0.000000 seconds
+  Array size 1000: 0.001000 seconds
+  Array size 10000: 0.056000 seconds
+
+Sorting with Radix Sort:
+  Array size 10: 0.001000 seconds
+  Array size 100: 0.000000 seconds
+  Array size 1000: 0.001000 seconds
+  Array size 10000: 0.001000 seconds
+
