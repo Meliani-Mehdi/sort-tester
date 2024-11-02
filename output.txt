@@ -1,35 +1,75 @@
 Sorting with Bubble Sort:
-  Array size 10: 0.000000 seconds
-  Array size 100: 0.000000 seconds
-  Array size 1000: 0.002000 seconds
-  Array size 10000: 0.246000 seconds
-  Array size 100000: 27.820000 seconds
+  Array size 10: 0.000009 seconds
+  Array size 100: 0.000135 seconds
+  Array size 1000: 0.009235 seconds
+  Array size 10000: 0.399671 seconds
+  Array size 20000: 1.361396 seconds
+  Array size 30000: 3.363278 seconds
+  Array size 40000: 5.750432 seconds
+  Array size 50000: 9.096552 seconds
+  Array size 60000: 13.187409 seconds
+  Array size 70000: 24.844223 seconds
+  Array size 80000: 30.042070 seconds
+  Array size 90000: 36.635475 seconds
+  Array size 100000: 44.957168 seconds
 
 Sorting with Quick Sort:
-  Array size 10: 0.000000 seconds
-  Array size 100: 0.000000 seconds
-  Array size 1000: 0.000000 seconds
-  Array size 10000: 0.001000 seconds
-  Array size 100000: 0.013000 seconds
+  Array size 10: 0.000001 seconds
+  Array size 100: 0.000008 seconds
+  Array size 1000: 0.000103 seconds
+  Array size 10000: 0.001251 seconds
+  Array size 20000: 0.002748 seconds
+  Array size 30000: 0.004286 seconds
+  Array size 40000: 0.005866 seconds
+  Array size 50000: 0.007561 seconds
+  Array size 60000: 0.010147 seconds
+  Array size 70000: 0.012403 seconds
+  Array size 80000: 0.020455 seconds
+  Array size 90000: 0.017454 seconds
+  Array size 100000: 0.018675 seconds
 
 Sorting with Selection Sort:
-  Array size 10: 0.000000 seconds
-  Array size 100: 0.000000 seconds
-  Array size 1000: 0.001000 seconds
-  Array size 10000: 0.097000 seconds
-  Array size 100000: 9.873000 seconds
+  Array size 10: 0.000002 seconds
+  Array size 100: 0.000019 seconds
+  Array size 1000: 0.001359 seconds
+  Array size 10000: 0.130684 seconds
+  Array size 20000: 0.540720 seconds
+  Array size 30000: 1.228456 seconds
+  Array size 40000: 2.162915 seconds
+  Array size 50000: 3.372891 seconds
+  Array size 60000: 5.020594 seconds
+  Array size 70000: 6.757835 seconds
+  Array size 80000: 9.812479 seconds
+  Array size 90000: 11.372956 seconds
+  Array size 100000: 13.954153 seconds
 
 Sorting with Insertion Sort:
-  Array size 10: 0.000000 seconds
-  Array size 100: 0.000000 seconds
-  Array size 1000: 0.000000 seconds
-  Array size 10000: 0.061000 seconds
-  Array size 100000: 5.918000 seconds
+  Array size 10: 0.000002 seconds
+  Array size 100: 0.000015 seconds
+  Array size 1000: 0.001158 seconds
+  Array size 10000: 0.083023 seconds
+  Array size 20000: 0.308137 seconds
+  Array size 30000: 0.702889 seconds
+  Array size 40000: 1.269624 seconds
+  Array size 50000: 2.087326 seconds
+  Array size 60000: 2.847683 seconds
+  Array size 70000: 3.942446 seconds
+  Array size 80000: 5.035493 seconds
+  Array size 90000: 6.357681 seconds
+  Array size 100000: 8.125434 seconds
 
 Sorting with Radix Sort:
-  Array size 10: 0.000000 seconds
-  Array size 100: 0.000000 seconds
-  Array size 1000: 0.000000 seconds
-  Array size 10000: 0.001000 seconds
-  Array size 100000: 0.007000 seconds
+  Array size 10: 0.000028 seconds
+  Array size 100: 0.000058 seconds
+  Array size 1000: 0.000132 seconds
+  Array size 10000: 0.000668 seconds
+  Array size 20000: 0.001119 seconds
+  Array size 30000: 0.001602 seconds
+  Array size 40000: 0.002127 seconds
+  Array size 50000: 0.002591 seconds
+  Array size 60000: 0.003258 seconds
+  Array size 70000: 0.003764 seconds
+  Array size 80000: 0.004082 seconds
+  Array size 90000: 0.004713 seconds
+  Array size 100000: 0.005299 seconds
 
